@@ -10,7 +10,7 @@
             max-width: 100%;
             overflow-x: hidden;
         }
-        
+
         /* Language switcher styles */
         .lang-switch {
             cursor: pointer;
@@ -18,11 +18,11 @@
             padding: 5px 10px;
             border-radius: 4px;
         }
-        
+
         .lang-switch:hover {
             background-color: rgba(255, 255, 255, 0.1);
         }
-        
+
         .lang-switch.active {
             background-color: rgba(255, 255, 255, 0.2);
             font-weight: bold;
@@ -294,9 +294,9 @@
             0%, 100% { opacity: 0; }
             50% { opacity: 1; }
         }
-        .about-us-typing { 
-            display: flex; 
-            width: 100%; 
+        .about-us-typing {
+            display: flex;
+            width: 100%;
             justify-content: center;
             align-items: center;
             min-height: 1.2em;
@@ -380,12 +380,193 @@
             }
         }
 
+        @media (max-width: 480px) {
+            .div-block-12 {
+                height: 450px !important;
+                min-height: 450px !important;
+                padding-top: 70px !important;
+                padding-bottom: 70px !important;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .div-block-12 {
+                height: 500px !important;
+                min-height: 500px !important;
+                padding-top: 80px !important;
+                padding-bottom: 80px !important;
+            }
+        }
+
+        /* Maximum specificity to override external CSS spacing */
+        html body .page-wraper .section .content-wrap .div-block-12 .div-block-26,
+        html body .page-wraper .section .content-wrap .div-block-12 .div-block-14,
+        html body .page-wraper .section .content-wrap .div-block-12 .div-block-13 {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Maximum specificity for typing elements */
+        html body .page-wraper .section .content-wrap .div-block-12 .about-us-typing {
+            margin: 2px 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Maximum specificity for grid gaps */
+        html body .page-wraper .section .content-wrap .div-block-12 {
+            grid-gap: 5px !important;
+            row-gap: 5px !important;
+            column-gap: 5px !important;
+        }
+
+        /* Maximum specificity for direct children */
+        html body .page-wraper .section .content-wrap .div-block-12 > div {
+            margin-bottom: 5px !important;
+        }
+
+        html body .page-wraper .section .content-wrap .div-block-12 > div:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* Additional override for any flexbox spacing */
+        html body .page-wraper .section .content-wrap .div-block-12 {
+            gap: 5px !important;
+        }
+
+        /* Nuclear option - force elements closer ONLY on low resolution devices */
+        @media (max-width: 480px) {
+            html body .page-wraper .section .content-wrap .div-block-12 .div-block-26 {
+                transform: translateY(0) !important;
+                margin-bottom: -20px !important;
+            }
+
+            html body .page-wraper .section .content-wrap .div-block-12 .div-block-14 {
+                transform: translateY(-20px) !important;
+                margin-bottom: -20px !important;
+            }
+
+            html body .page-wraper .section .content-wrap .div-block-12 .div-block-13 {
+                transform: translateY(-40px) !important;
+                margin-bottom: 0 !important;
+            }
+
+            /* Force the container to handle the overlapping on small screens */
+            html body .page-wraper .section .content-wrap .div-block-12 {
+                overflow: visible !important;
+                position: relative !important;
+            }
+        }
+
+        /* Normal spacing for larger screens */
+        @media (min-width: 481px) {
+            html body .page-wraper .section .content-wrap .div-block-12 .div-block-26,
+            html body .page-wraper .section .content-wrap .div-block-12 .div-block-14,
+            html body .page-wraper .section .content-wrap .div-block-12 .div-block-13 {
+                transform: none !important;
+                margin-bottom: 0 !important;
+            }
+
+            html body .page-wraper .section .content-wrap .div-block-12 {
+                overflow: visible !important;
+                position: relative !important;
+            }
+        }
+
+        /* Keep the spacing improvements */
+        /* @media (max-width: 991px) {
+            .div-block-12 {
+                margin-left: -6vw !important;
+                margin-right: -6vw !important;
+                padding-left: 6vw !important;
+                padding-right: 6vw !important;
+            }
+        }
+
         @media (max-width: 767px) {
             .div-block-12 {
-                margin-left: -4.30108vw !important;
-                margin-right: -4.30108vw !important;
-                padding-left: 4.30108vw !important;
-                padding-right: 4.30108vw !important;
+                margin-left: -6vw !important;
+                margin-right: -6vw !important;
+                padding-left: 6vw !important;
+                padding-right: 6vw !important;
+            }
+        } */
+
+        @media (max-width: 480px) {
+            .div-block-12 {
+                margin-left: -8vw !important;
+                margin-right: -8vw !important;
+                padding-left: 8vw !important;
+                padding-right: 8vw !important;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .div-block-12 {
+                margin-left: -10vw !important;
+                margin-right: -10vw !important;
+                padding-left: 10vw !important;
+                padding-right: 10vw !important;
+            }
+        }
+
+        /* Override external CSS constraints for better text spacing */
+        /* @media (max-width: 991px) {
+            .div-block-12 .div-block-13 {
+                max-width: 80vw !important;
+            }
+            .div-block-12 .div-block-14 {
+                max-width: 80vw !important;
+            }
+            .div-block-12 .div-block-26 {
+                max-width: 80vw !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .div-block-12 .div-block-13 {
+                max-width: 85vw !important;
+            }
+            .div-block-12 .div-block-14 {
+                max-width: 85vw !important;
+            }
+            .div-block-12 .div-block-26 {
+                max-width: 85vw !important;
+            }
+        } */
+
+        @media (max-width: 480px) {
+            .div-block-12 .div-block-13 {
+                max-width: 90vw !important;
+            }
+            .div-block-12 .div-block-14 {
+                max-width: 90vw !important;
+            }
+            .div-block-12 .div-block-26 {
+                max-width: 90vw !important;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .div-block-12 .div-block-13 {
+                max-width: 92vw !important;
+            }
+            .div-block-12 .div-block-14 {
+                max-width: 92vw !important;
+            }
+            .div-block-12 .div-block-26 {
+                max-width: 92vw !important;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .div-block-12 .div-block-13 {
+                max-width: 94vw !important;
+            }
+            .div-block-12 .div-block-14 {
+                max-width: 94vw !important;
+            }
+            .div-block-12 .div-block-26 {
+                max-width: 94vw !important;
             }
         }
 
@@ -439,10 +620,10 @@
 
         @media (max-width: 479px) {
             .div-block-12 {
-                margin-left: -4.26667vw !important;
-                margin-right: -4.26667vw !important;
-                padding-left: 4.26667vw !important;
-                padding-right: 4.26667vw !important;
+                margin-left: -25px !important;
+                margin-right: -25px !important;
+                padding-left: 25px !important;
+                padding-right: 25px !important;
             }
         }
 
@@ -638,7 +819,7 @@
         function translatePage(lang) {
             currentLang = lang;
             const elements = document.querySelectorAll('[data-translate]');
-            
+
             elements.forEach(element => {
                 const key = element.getAttribute('data-translate');
                 if (translations[lang] && translations[lang][key]) {
@@ -706,7 +887,7 @@
 
             containers.forEach(startElementCycle);
         }
-        
+
         // Initialize translation system
         document.addEventListener('DOMContentLoaded', function() {
             // Add click handlers to language switcher
@@ -722,7 +903,7 @@
             // Set initial language
             translatePage('ua');
             runTypingAnimation();
-            
+
             // Add hero title animation
             const heroTitle = document.querySelector('[data-translate="hero-title"]');
             if (heroTitle) {
@@ -734,6 +915,47 @@
             if (heroTitle2) {
                 heroTitle2.classList.add('hero-title-animate');
             }
+
+            // Force div-block-12 height override
+            function forceDivBlock12Height() {
+                const divBlock12 = document.querySelector('.div-block-12');
+                if (divBlock12) {
+                    // Remove any inline height styles
+                    divBlock12.style.removeProperty('height');
+                    divBlock12.style.removeProperty('min-height');
+                    divBlock12.style.removeProperty('max-height');
+
+                    // Set new height values
+                    const viewportWidth = window.innerWidth;
+                    let newHeight;
+
+                    if (viewportWidth <= 320) {
+                        newHeight = '40vw';
+                    } else if (viewportWidth <= 360) {
+                        newHeight = '35vw';
+                    } else if (viewportWidth <= 480) {
+                        newHeight = '30vw';
+                    } else if (viewportWidth <= 767) {
+                        newHeight = '25vw';
+                    } else if (viewportWidth <= 991) {
+                        newHeight = '20vw';
+                    } else {
+                        newHeight = '15vw';
+                    }
+
+                    divBlock12.style.minHeight = newHeight;
+                    divBlock12.style.height = 'auto';
+                }
+            }
+
+            // Run immediately and on resize
+            forceDivBlock12Height();
+            window.addEventListener('resize', forceDivBlock12Height);
+
+            // Also run after a short delay to catch any late-loading CSS
+            setTimeout(forceDivBlock12Height, 100);
+            setTimeout(forceDivBlock12Height, 500);
+            setTimeout(forceDivBlock12Height, 1000);
         });
     </script>
 </head>
