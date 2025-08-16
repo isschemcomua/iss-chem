@@ -361,7 +361,7 @@
                 max-width: 80%;
             }
         }
-        
+
         /* Fix for div-block-12 background to take full width */
         .div-block-12 {
             margin-left: -8.33333vw !important;
@@ -370,7 +370,7 @@
             padding-right: 8.33333vw !important;
             padding-bottom: 8vw;
         }
-        
+
         @media (max-width: 991px) {
             .div-block-12 {
                 margin-left: -4.30108vw !important;
@@ -379,7 +379,7 @@
                 padding-right: 4.30108vw !important;
             }
         }
-        
+
         @media (max-width: 767px) {
             .div-block-12 {
                 margin-left: -4.30108vw !important;
@@ -388,55 +388,55 @@
                 padding-right: 4.30108vw !important;
             }
         }
-        
+
         /* Fix for problematic resolutions (760px, 1024px, etc.) */
         @media (min-width: 700px) and (max-width: 1200px) {
             .div-block-26 {
                 text-align: left !important;
             }
-            
+
             .div-block-14 {
                 text-align: center !important;
             }
-            
+
             .div-block-13 {
                 text-align: right !important;
             }
         }
-        
+
         /* Vertical alignment for typing elements */
         .div-block-26 .about-us-typing {
             align-items: center !important;
         }
-        
+
         .div-block-14 .about-us-typing {
             align-items: flex-start !important;
             margin-top: -1em !important;
         }
-        
+
         .div-block-13 .about-us-typing {
             align-items: flex-start !important;
             margin-top: -1em !important;
         }
-        
+
         /* Disable vertical alignment on mobile to prevent overlap */
         @media (max-width: 767px) {
             .div-block-26 .about-us-typing {
                 align-items: center !important;
                 margin-top: 0 !important;
             }
-            
+
             .div-block-14 .about-us-typing {
                 align-items: center !important;
                 margin-top: 0 !important;
             }
-            
+
             .div-block-13 .about-us-typing {
                 align-items: center !important;
                 margin-top: 0 !important;
             }
         }
-        
+
         @media (max-width: 479px) {
             .div-block-12 {
                 margin-left: -4.26667vw !important;
@@ -444,6 +444,43 @@
                 padding-left: 4.26667vw !important;
                 padding-right: 4.26667vw !important;
             }
+        }
+
+        /* Hero title slide-up animation */
+        .hero-title-slide-up {
+            opacity: 0 !important;
+            transform: translateY(60px) !important;
+            transition: all 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+            will-change: opacity, transform;
+        }
+
+        .hero-title-slide-up.animate {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Simple hero title slide-up animation */
+        .hero-title-animate {
+            animation: slideUp 4s ease-out forwards;
+            overflow: hidden;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(60px);
+                clip-path: inset(0 0 100% 0);
+            }
+            100% {
+                transform: translateY(0);
+                clip-path: inset(0 0 0 0);
+            }
+        }
+
+        .div-block-3 {
+            grid-row-gap: 0 !important;
+        }
+        .h3-under {
+            padding-top: 3.47222vw;
         }
     </style>
     <title>ISS</title>
@@ -537,7 +574,8 @@
                 'menu-about': 'Про нас',
                 'menu-products': 'Продукція',
                 'menu-contacts': 'Контакти',
-                'hero-title': 'ХІМІЧНІ РІШЕННЯ ДЛЯ ПРОМИСЛОВОСТІ',
+                'hero-title': 'ХІМІЧНІ РІШЕННЯ ДЛЯ',
+                'hero-title-2': 'ПРОМИСЛОВОСТІ',
                 'hero-subtitle': 'Забезпечення інноваційними хімічними продуктами та послугами для різних галузей',
                 'about-title': 'ПРО НАС',
                 'about-text-1': 'ТОВ «МІЖРЕГІОНАЛЬНЕ ЯКІСНЕ ПОСТАЧАННЯ» - постачальник промислової хімічної продукції для провідних газовидобувних компаній України.<br><br>Ми маємо надійні договірні відносини з провідними хімічними компаніями світу, що забезпечує постійну наявність продукції на складах зберігання в Полтавському регіоні та доставку на об\'єкти замовника в стислі терміни.',
@@ -564,7 +602,8 @@
                 'menu-about': 'About Us',
                 'menu-products': 'Products',
                 'menu-contacts': 'Contacts',
-                'hero-title': 'CHEMICAL SOLUTIONS FOR INDUSTRY',
+                'hero-title': 'CHEMICAL SOLUTIONS FOR',
+                'hero-title-2': 'INDUSTRY',
                 'hero-subtitle': 'Providing innovative chemical products and services for various industries',
                 'about-title': 'ABOUT US',
                 'about-text-1': 'LLC "INTERREGIONAL QUALITY SUPPLY" - supplier of industrial chemical products for leading gas production companies in Ukraine.<br><br>We have reliable contractual relationships with leading chemical companies in the world, which ensures constant availability of products in storage warehouses in the Poltava region and delivery to customer facilities in short terms.',
@@ -683,6 +722,18 @@
             // Set initial language
             translatePage('ua');
             runTypingAnimation();
+            
+            // Add hero title animation
+            const heroTitle = document.querySelector('[data-translate="hero-title"]');
+            if (heroTitle) {
+
+                heroTitle.classList.add('hero-title-animate');
+            }
+
+            const heroTitle2 = document.querySelector('[data-translate="hero-title-2"]');
+            if (heroTitle2) {
+                heroTitle2.classList.add('hero-title-animate');
+            }
         });
     </script>
 </head>
@@ -719,7 +770,8 @@
             <div class="content-wrap second">
                 <div class="imag-bg">
                     <div class="div-block-3">
-                        <h1 class="h1" data-translate="hero-title">ХІМІЧНІ РІШЕННЯ ДЛЯ ПРОМИСЛОВОСТІ</h1>
+                        <h1 class="h1" data-translate="hero-title">ХІМІЧНІ РІШЕННЯ ДЛЯ</h1>
+                        <h1 class="h1" data-translate="hero-title-2">ПРОМИСЛОВОСТІ</h1>
                         <div class="h3-under" data-translate="hero-subtitle">Забезпечення інноваційними хімічними продуктами та послугами для різних галузей</div>
                     </div>
                     <div class="div-block-27"></div>
