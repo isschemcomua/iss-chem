@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Шар_2" data-name="Шар 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: .7px;
+      }
+
+      .cls-2 {
+        fill: #090d19;
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: ArialMT, Arial;
+        font-size: 8.84px;
+      }
+    </style>
+  </defs>
+  <g id="_Шар_1-2" data-name="Шар 1">
+    <g id="_Шар_3" data-name="Шар 3">
+      <g id="_Шар_4" data-name="Шар 4">
+        <g>
+          <rect class="cls-2" width="32" height="32"/>
+          <g>
+            <polygon class="cls-1" points="26.41 17.11 18.67 17.11 14.81 23.55 18.67 30 26.41 30 30.28 23.55 26.41 17.11"/>
+            <polygon class="cls-1" points="26.41 2 18.67 2 14.81 8.45 18.67 14.89 26.41 14.89 30.28 8.45 26.41 2"/>
+            <polygon class="cls-1" points="13.15 9.54 5.41 9.54 1.54 15.98 5.41 22.43 13.15 22.43 17.01 15.98 13.15 9.54"/>
+            <line class="cls-1" x1="15.1" y1="19.4" x2="16.55" y2="20.19"/>
+            <line class="cls-1" x1="15.35" y1="12.92" x2="16.81" y2="12.15"/>
+            <text class="cls-3" transform="translate(19.55 11.51) scale(1.01 1)"><tspan x="0" y="0">S</tspan></text>
+            <text class="cls-3" transform="translate(19.55 26.62) scale(1.01 1)"><tspan x="0" y="0">S</tspan></text>
+            <text class="cls-3" transform="translate(7.79 18.71) scale(.91 1)"><tspan x="0" y="0">I</tspan></text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
